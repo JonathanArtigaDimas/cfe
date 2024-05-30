@@ -1,0 +1,26 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Reservaciones{% endblock %}
+
+{% block barra_de_navegacion %}
+<nav>
+    <ul>
+        <li><a href="/">main</a></li>
+        <li>
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+            </a>
+        </li>
+        <li><a href="/menu">Menu</a></li>
+        <li>
+            <a href="/login">
+                <img src="{{ url_for('static', filename='img/user.png') }}" alt="Avatar de usuario">
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block contenido %}
+<h1> Estamos en pagina Reservas</h1>
+{% endblock %}

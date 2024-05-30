@@ -1,0 +1,45 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Administracion{% endblock %}
+
+{% block barra_de_navegacion %}
+<nav>
+    <ul>
+        <li><a href="/admin_area">Visualizacion de datos</a></li>
+        <li><a href="/add_products">Añadir productos</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block contenido %}
+{% if pedido %}
+<table>
+    <thead class="table-dark ">
+        <tr>
+            <th scope="col">Nº</th>
+            <th scope="col">ID usuario</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Total cancelado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mostrar in pedido %}
+        <tr>
+            <th scope="row"> {{mostrar.id}}</th>
+            <td> {{mostrar._id}} </td>
+            <td>{{mostrar.fecha}}</td>
+            <td> {{mostrar.total}} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>no hay datos</p>
+{% endif %}
+
+{% if mensaje %}
+<script>
+    alert("{{ mensaje | safe }}")
+</script>
+{% endif %}
+{% endblock %}

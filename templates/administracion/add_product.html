@@ -1,0 +1,27 @@
+{% extends "admin/base.html" %}
+
+{% block title %}add_product{% endblock %}
+
+{% block barra_de_navegacion %}
+<nav>
+    <ul>
+        <li><a href="/admin_area">Visualizacion de datos</a></li>
+        <li><a href="/add_products">Añadir productos</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block contenido %}
+<h1> Login</h1>
+<form action="agregar" method="post" enctype="multipart/form-data">
+    <label for="">Ingresa nombre del producto</label><br>
+    <input type="text" name="txtName"><br>
+    <label for="">Ingresa descripcion del producto</label><br>
+    <input type="text" name="txtDescription"><br>
+    <label for="">Ingresa la imagen del producto</label><br>
+    <input type="file" name="foto" id=""><br>
+    <label for="">Ingresa precio del producto</label><br>
+    <input type="text" name="precioProducto">
+    <button type="submit">Agregar Producto</button>
+</form>
+{% endblock %}

@@ -1,0 +1,164 @@
+body {
+    background-color: #0F1010; /* Color de fondo oscuro */
+    color: #FFFFFF; /* Color del texto principal para mantener buen contraste */
+    font-family: 'Arial, sans-serif'; /* Fuente elegante y minimalista */
+    margin: 0;
+    padding: 0;
+}
+/*--------Barra de navegacion*/
+
+nav {
+    background-color: rgba(9, 27, 33, 0.8); /* Fondo de la barra de navegación con transparencia */
+    position: fixed; /* Fija la posición de la barra de navegación */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos de manera equitativa */
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #FFFFFF; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: color 0.3s ease; /* Efecto de transición para el cambio de color */
+}
+
+nav ul li a:hover {
+    color: #ECA717; /* Color de los enlaces al pasar el cursor */
+}
+
+nav ul li img {
+    height: 40px; /* Ajusta el tamaño de las imágenes */
+    transition: transform 0.3s ease; /* Efecto de transición para la transformación */
+}
+
+nav ul li img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+/* Añadir margen superior al cuerpo para evitar que el contenido se solape con la barra de navegación */
+body {
+    padding-top: 60px; /* Ajusta el valor según la altura de la barra de navegación */
+}
+/*---------Fin de barra de navegacion*/
+
+
+/*EFECTO PARALLAX*/
+/*.parallax {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.parallax img {
+    position: absolute;
+    width: 100%;
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50);
+    font-size: 4rem;
+}*/
+/*FIN EFECTO PARALLAX*/
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.producto h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+/* Estilos para el carrito */
+#carrito {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    padding: 15px;
+    width: 300px;
+}
+
+#carrito h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#carrito ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#carrito ul li {
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+#carrito ul li img {
+    border-radius: 5px;
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+#carrito ul li button {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#carrito ul li button:hover {
+    background-color: #c82333;
+}
+
+#carrito-total {
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: right;
+}
